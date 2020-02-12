@@ -49,3 +49,4 @@ os.environ['GIT_ASKPASS'] = os.path.join(act_dir, 'askpass.py')
 log('Cloning into %s' % BASE_DIR)
 Repo.clone_from(REPO_URL, BASE_DIR, branch=REPO_BRANCH, progress=CloneProgress())
 
+time.sleep(3600)

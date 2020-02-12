@@ -2,10 +2,10 @@ This image creates a python container, clones a github (python) repo, installs t
 
 
 ## How does it work?
-It’s simple. You need to define the following environment variables:
+It’s simple. You can define the following environment variables:
 
 ```
-REPO_URL:  Url of the GitHub repository  - no default
+REPO_URL:  Url of the GitHub repository  - no default - REQUIRED !!
 REPO_BRANCH:  Repository branch which shall be cloned  - default: 'master'
 BASE_DIR:  Directory for cloning the repository  - default: '~/repo'
 ```

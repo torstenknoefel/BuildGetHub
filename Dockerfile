@@ -6,7 +6,7 @@ FROM python:3
 WORKDIR .
 
 RUN apt-get update && apt-get install -y \
-    git, \
+    git \
     python3-pip
 
 COPY . .

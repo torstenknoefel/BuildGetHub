@@ -15,4 +15,11 @@ GIT_USERNAME
 GIT_PASSWORD
 ```
 
+To connect to docker you need to have the following bind mapping:
+```
+Host/volume                                 Path in container
+/var/run/docker.sock                        /var/run/docker.sock  
+```
+
+
 In addition you need to set ALL environment variables your repository might require.

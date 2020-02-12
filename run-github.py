@@ -11,7 +11,7 @@ from git import Repo, RemoteProgress
 
 
 def log(log_text):
-    print(datetime.datetime.now(), '   ', log_text)
+    print(datetime.datetime.now(), '   ', log_text, flush=True)
 
 
 def error(log_text):
@@ -22,7 +22,7 @@ def error(log_text):
 class CloneProgress(RemoteProgress):
     def update(self, op_code, cur_count, max_count=None, message=''):
         if message:
-            print(message)
+            print(message, flush=True)
 
 
 log('Starting installation from GITHUB')

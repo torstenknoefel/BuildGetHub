@@ -55,5 +55,6 @@ Repo.clone_from(REPO_URL, BASE_DIR, branch=REPO_BRANCH, progress=CloneProgress()
 
 log('Installing requirements...')
 os.system('pip3 install -r '+BASE_DIR+'/requirements.txt')
+
 log('Starting run-me.py...')
 os.system('python3 '+BASE_DIR+'/run-me.py')

@@ -53,8 +53,11 @@ log('Cloning into %s' % BASE_DIR)
 
 Repo.clone_from(REPO_URL, BASE_DIR, branch=REPO_BRANCH, progress=CloneProgress())
 
+log('Change into repo directory')
+os.chdir(BASE_DIR)
+
 log('Installing requirements...')
-os.system('pip3 install -r '+BASE_DIR+'/requirements.txt')
+os.system('pip3 install -r requirements.txt')
 
 log('Starting run-me.py...')
-os.system('python3 '+BASE_DIR+'/run-me.py')
+os.system('python3 run-me.py')

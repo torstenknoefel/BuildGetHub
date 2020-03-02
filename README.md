@@ -2,7 +2,7 @@ This image creates a python container, clones a github (python) repo, installs t
 
 
 ## How does it work?
-It’s simple. You can define the following environment variables:
+It’s simple. You HAVE to define the following environment variables:
 
 ```
 REPO_URL:  Url of the GitHub repository  - no default - REQUIRED !!
@@ -15,11 +15,11 @@ GIT_USERNAME
 GIT_PASSWORD
 ```
 
-To connect to docker you need to have the following bind mapping:
+To connect to docker you need to have the following 'bind mapping' volume:
 ```
 Host/volume                                 Path in container
 /var/run/docker.sock                        /var/run/docker.sock  
 ```
 
 
-In addition you need to set ALL environment variables your repository might require.
+In addition you need to set ALL environment variables your repository (provided as REPO_URL) might require.

@@ -2,19 +2,11 @@ This image creates a python container, clones a github (python) repo, installs t
 
 
 ## How does it work?
-It’s simple. You can define the following environment variables:
+It’s simple. You HAVE TO define the following environment variables:
 
 ```
 REPO_URL:  Url of the GitHub repository  - no default - REQUIRED !!
-REPO_BRANCH:  Repository branch which shall be cloned  - default: 'master'
-BASE_DIR:  Directory for cloning the repository  - default: '~/repo'
 ```
-In case the repository is private you need to specify credentials:
-```
-GIT_USERNAME
-GIT_PASSWORD
-```
-
 To connect to docker you need to have the following bind mapping:
 ```
 Host/volume                                 Path in container
@@ -22,4 +14,18 @@ Host/volume                                 Path in container
 ```
 
 
+In case the repository is private you need to specify credentials:
+```
+GIT_USERNAME
+GIT_PASSWORD
+```
+You CAN set the following environment variables to change their default value:
+```
+REPO_BRANCH:  Repository branch which shall be cloned  - default: 'master'
+BASE_DIR:  Directory for cloning the repository  - default: '~/repo'
+```
 In addition you need to set ALL environment variables your repository might require.
+
+To watch the installation process the container writes to a log channel.
+
+

@@ -1,5 +1,8 @@
 This image creates a python container, clones a github (python) repo, installs the requirements if any and runs a python file called "run-me.py"
 
+How to install docker: https://docs.docker.com/install/linux/docker-ce/debian/
+
+How to install Portainer: https://www.portainer.io/installation/
 
 ## How does it work?
 It’s simple. You HAVE TO define the following environment variables:
